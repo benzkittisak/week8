@@ -1,4 +1,5 @@
 function digitalClock(time){
+
     let hour = (Math.floor(time / 3600) < 10) ? `0${Math.floor(time / 3600)}` : Math.floor(time / 3600);
     time -= hour * 3600;
     let mins = (Math.floor(time / 60) < 10) ? `0${Math.floor(time / 60)}` : Math.floor(time / 60) ;
