@@ -1,8 +1,8 @@
 function removeDups(data){
     let result = [];
-
+    
     data.forEach(element => {
-       if(result.includes(element) === false) result.push(element);
+       if(!result.includes(element)) result.push(element);
     });
     return result;
 }
