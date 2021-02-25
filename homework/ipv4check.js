@@ -4,7 +4,7 @@ function isValidIP(ip){
     if(arr_ip.length === 4){
         for(let value of arr_ip){
             if(parseInt(value) <= 255 && value[0] != '0') check = true;
-            else check = false;
+            else return false;
         }
     } else {
         return false;
