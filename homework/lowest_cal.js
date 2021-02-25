@@ -1,13 +1,5 @@
 function sumTwoSmallestNums(num){
     let res = num.sort((a,b)=>a-b);
-    /*
-    let calc = [];
-    for(let i = 0 ; i<res.length;i++){
-        if(res[i] > 0){
-            calc.push(res[i]);
-        }
-    }
-    */
     let calc = res.filter((a)=>a>0);
     return calc[0]+ calc[1]
 }
