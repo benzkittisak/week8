@@ -5,7 +5,7 @@ function digitalClock(time){
     let mins = (Math.floor(time / 60) < 10) ? `0${Math.floor(time / 60)}` : Math.floor(time / 60) ;
     time -= mins * 60 ;
     let secs = (time < 10) ? `0${time}` : time ;
-    if(hour === 24) hour = '00';
+    if(hour >= 24) hour = '00';
     return `${hour}:${mins}:${secs}`;
 
 }
