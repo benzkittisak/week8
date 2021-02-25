@@ -2,11 +2,15 @@ function isValidIP(ip){
     let arr_ip = ip.split('.');
     let check = true;
     if(arr_ip.length === 4){
-        for(let value of arr_ip){
-            if(parseInt(value) <= 255 && value[0] != '0') check = true;
+        for(let i =0 ; i<arr_ip.length;i++){
+            if(parseInt(arr_ip[i]) <= 255 && value[0] != '0') check = true;
             else return false;
         }
-    } else {
+    }
+    else if (parseInt(arr_ip[3]) == 0){
+        return false;
+    }
+    else {
         return false;
     }
     return check;
